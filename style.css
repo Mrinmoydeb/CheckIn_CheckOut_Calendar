@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.booking-form {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin: 50px auto;
+}
+
+input {
+    padding: 5px;
+    width: 130px;
+}
+
+#calendar-container {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.calendar-container.hidden {
+    display: none;
+}
+
+.calendar {
+    display: flex;
+    gap: 10px;
+}
+
+.month {
+    width: 200px;
+}
+
+.day-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.dates {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.date {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.date:hover {
+    background-color: lightblue;
+    border-radius: 50%;
+}
+
+
+.date.disabled {
+    color: #ccc;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.date.highlight {
+    background-color: #ffd700; /* Highlight with a yellow color */
+    color: #fff;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+button {
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.manual-close {
+    display: block;
+    margin: 10px auto;
+    padding: 5px 10px;
+    background-color: #dc3545;
+}
+
+button.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.highlight {
+    background-color: rgba(0, 123, 255, 0.5); /* Lighter for in-between dates */
+}
+
+.checkin-highlight,
+.checkout-highlight {
+    background-color: rgba(0, 123, 255, 0.8); /* Darker for check-in/check-out */
+}
